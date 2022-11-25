@@ -2,7 +2,10 @@
 <p><%= @article.text %></p>
 <ul>
   <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <%= button_to "Destroy", article_path(@article), method: :delete %>
+  <li><%= link_to "Destroy", article_path(@article), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
 </ul>
 <br />
 <hr />
