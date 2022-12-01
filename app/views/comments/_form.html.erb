@@ -1,0 +1,13 @@
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+
+  <%= form.text_field :author, type: 'hidden', value: current_user.username %>
+
+  <div>
+    <%= form.text_area :body %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+
+<% end %>
