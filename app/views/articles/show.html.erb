@@ -1,4 +1,4 @@
-<h1><%= @article.title %></h1>
+<h2><%= @article.title %></h2>
 <p><%= @article.text %></p>
 
 <% if user_signed_in? %>
@@ -10,17 +10,13 @@
     } %></li>
   </ul>
 <% end %>
-<br />
-<hr />
-<%= link_to '<- Main page', articles_path %>
-<hr />
-<br />
+
 <% if user_signed_in? %>
-<h2>Add comment:</h2>
+<h4>Add comment:</h4>
   <%= render 'comments/form' %>
 <br />
 <hr />
 <% end %>
-<h2>Comments</h2>
+<h4>Comments</h4>
 <hr />
 <%= render @article.comments %>

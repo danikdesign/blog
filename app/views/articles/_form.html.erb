@@ -1,20 +1,20 @@
 <%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br />
-    <%= form.text_field :title %>
+  <div class="mb-3">
+    <%= form.label :title, class:"form-label" %>
+    <%= form.text_field :title, class:"form-control" %>
     <% article.errors.full_messages_for(:title).each do |msg| %>
       <div><%= msg %></div>
     <% end %>
   </div>
 
-  <div>
-    <%= form.label :text %><br />
-    <%= form.text_field :text %><br />
+  <div class="mb-3">
+    <%= form.label :text, class:"form-label" %>
+    <%= form.text_area :text, class:"form-control", rows:"5" %>
     <% article.errors.full_messages_for(:text).each do |msg| %>
       <div><%= msg %></div>
     <% end %>
   </div>
 
-  <div><%= form.submit %></div>
+  <%= form.button class:"btn btn-primary" %>
 
 <% end %>
