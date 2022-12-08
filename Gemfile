@@ -76,3 +76,9 @@ end
 gem 'bootstrap', '~> 5.2.3'
 
 gem 'jquery-rails'
+
+group :test, :development do
+  gem 'rspec', '~> 3.4'
+  gem 'rspec-rails'
+  gem 'capybara'
+end
