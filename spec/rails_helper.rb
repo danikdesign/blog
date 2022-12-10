@@ -69,11 +69,28 @@ Shoulda::Matchers.configure do |config|
   end
 end
 
+#FactoryGirl
 RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 end
 
-#session_helper
+#Database_cleaner
+RSpec.configure do |config|
+
+  config.before(:suite) do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.around(:each) do |example|
+    DatabaseCleaner.cleaning do
+      example.run
+    end
+  end
+
+end
+
+#Session_helper
 def sign_up
   visit new_user_registration_path
 
