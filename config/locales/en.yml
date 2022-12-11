@@ -34,3 +34,12 @@ en:
 
   contacts:
     contact_us: "Contact us"
+
+  articles:
+    articles: "Articles"
+    new_article: "New article"
+    edit_article: "Edit article"
+
+  comments:
+    comments: "Comments"
+    add_comment: "Add comment"
