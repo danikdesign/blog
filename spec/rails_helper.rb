@@ -108,7 +108,7 @@ def create_article
   fill_in 'article_title', with: 'Test title#0123'
   fill_in 'article_text', with: 'Autem rerum itaque mollitia iure nesciunt libero non rerum velit at cupiditate minima doloremque odio nesciunt.'
 
-  click_button 'Create article'
+  click_button 'Send article'
 
   expect(page).to have_content 'Test title#0123'
 end
