@@ -101,3 +101,14 @@ def sign_up
 
   click_button 'Sign up'
 end
+
+def create_article
+  visit new_article_path
+
+  fill_in 'article_title', with: 'Test title#0123'
+  fill_in 'article_text', with: 'Autem rerum itaque mollitia iure nesciunt libero non rerum velit at cupiditate minima doloremque odio nesciunt.'
+
+  click_button 'Create article'
+
+  expect(page).to have_content 'Test title#0123'
+end
