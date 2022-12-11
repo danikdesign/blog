@@ -5,12 +5,12 @@
 
   <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-    <%= link_to "Edit", edit_article_path(@article), class:"btn btn-outline-success btn-sm" %>
+    <%= link_to "Edit", edit_article_path(@article), class:"btn btn-outline-success btn-sm", value: "Edit" %>
 
     <%= link_to "Destroy", article_path(@article), class:"btn btn-outline-danger btn-sm", data: {
       turbo_method: :delete,
       turbo_confirm: "Are you sure?"
-    } %>
+    }, value: "Destroy" %>
 
   </div>
 
