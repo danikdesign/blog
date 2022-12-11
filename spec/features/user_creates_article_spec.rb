@@ -5,5 +5,5 @@ feature "Article Creation" do
     sign_up
     create_article
   end
-  
+
 end
